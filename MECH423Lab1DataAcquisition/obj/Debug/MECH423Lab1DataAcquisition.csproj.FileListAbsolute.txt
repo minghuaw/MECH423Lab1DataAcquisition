@@ -1,0 +1,20 @@
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.exe.config
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.exe
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.pdb
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csprojResolveAssemblyReference.cache
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.Form1.resources
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.Properties.Resources.resources
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csproj.GenerateResource.Cache
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csproj.CoreCompileInputs.cache
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.exe
+C:\Users\Minghua\documents\visual studio 2017\Projects\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.pdb
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.exe.config
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.exe
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MECH423Lab1DataAcquisition.pdb
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csprojResolveAssemblyReference.cache
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.Form1.resources
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.Properties.Resources.resources
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csproj.GenerateResource.Cache
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csproj.CoreCompileInputs.cache
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.exe
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.pdb
