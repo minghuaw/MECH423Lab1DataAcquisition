@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnSerial = new System.Windows.Forms.Button();
             this.cmbSerial = new System.Windows.Forms.ComboBox();
             this.txtXA = new System.Windows.Forms.TextBox();
@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tmrUpdateData = new System.Windows.Forms.Timer(this.components);
             this.labelShowBufferFill = new System.Windows.Forms.Label();
+            this.panelMy2048 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chtXYZ)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,32 +131,32 @@
             // 
             this.chtXYZ.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea5.Name = "ChartArea1";
-            this.chtXYZ.ChartAreas.Add(chartArea5);
-            legend5.Alignment = System.Drawing.StringAlignment.Center;
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend5.MaximumAutoSize = 10F;
-            legend5.Name = "Legend1";
-            this.chtXYZ.Legends.Add(legend5);
+            chartArea1.Name = "ChartArea1";
+            this.chtXYZ.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend1.MaximumAutoSize = 10F;
+            legend1.Name = "Legend1";
+            this.chtXYZ.Legends.Add(legend1);
             this.chtXYZ.Location = new System.Drawing.Point(12, 168);
             this.chtXYZ.Name = "chtXYZ";
             this.chtXYZ.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series13.ChartArea = "ChartArea1";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series13.Legend = "Legend1";
-            series13.Name = "SeriesX";
-            series14.ChartArea = "ChartArea1";
-            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series14.Legend = "Legend1";
-            series14.Name = "SeriesY";
-            series15.ChartArea = "ChartArea1";
-            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series15.Legend = "Legend1";
-            series15.Name = "SeriesZ";
-            this.chtXYZ.Series.Add(series13);
-            this.chtXYZ.Series.Add(series14);
-            this.chtXYZ.Series.Add(series15);
-            this.chtXYZ.Size = new System.Drawing.Size(519, 355);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series1.Legend = "Legend1";
+            series1.Name = "SeriesX";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series2.Legend = "Legend1";
+            series2.Name = "SeriesY";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+            series3.Legend = "Legend1";
+            series3.Name = "SeriesZ";
+            this.chtXYZ.Series.Add(series1);
+            this.chtXYZ.Series.Add(series2);
+            this.chtXYZ.Series.Add(series3);
+            this.chtXYZ.Size = new System.Drawing.Size(588, 533);
             this.chtXYZ.TabIndex = 8;
             this.chtXYZ.Text = "XYZ Line Chart";
             // 
@@ -173,20 +174,22 @@
             // 
             // pgbarBuffer
             // 
-            this.pgbarBuffer.Location = new System.Drawing.Point(441, 21);
+            this.pgbarBuffer.Location = new System.Drawing.Point(419, 21);
             this.pgbarBuffer.Name = "pgbarBuffer";
             this.pgbarBuffer.Size = new System.Drawing.Size(137, 31);
             this.pgbarBuffer.TabIndex = 9;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(372, 24);
+            this.label1.Location = new System.Drawing.Point(345, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 25);
+            this.label1.Size = new System.Drawing.Size(68, 25);
             this.label1.TabIndex = 10;
-            this.label1.Text = "Buffer";
+            this.label1.Text = "Buffer ";
             // 
             // tmrUpdateData
             // 
@@ -196,21 +199,32 @@
             // 
             // labelShowBufferFill
             // 
+            this.labelShowBufferFill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.labelShowBufferFill.AutoSize = true;
             this.labelShowBufferFill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelShowBufferFill.Location = new System.Drawing.Point(584, 24);
+            this.labelShowBufferFill.Location = new System.Drawing.Point(577, 24);
             this.labelShowBufferFill.Name = "labelShowBufferFill";
             this.labelShowBufferFill.Size = new System.Drawing.Size(23, 25);
             this.labelShowBufferFill.TabIndex = 11;
             this.labelShowBufferFill.Text = " /";
             // 
+            // panelMy2048
+            // 
+            this.panelMy2048.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelMy2048.Location = new System.Drawing.Point(693, 12);
+            this.panelMy2048.Name = "panelMy2048";
+            this.panelMy2048.Size = new System.Drawing.Size(650, 650);
+            this.panelMy2048.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(975, 535);
-            this.Controls.Add(this.labelShowBufferFill);
+            this.ClientSize = new System.Drawing.Size(1384, 713);
+            this.Controls.Add(this.panelMy2048);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.labelShowBufferFill);
             this.Controls.Add(this.pgbarBuffer);
             this.Controls.Add(this.chtXYZ);
             this.Controls.Add(this.labelZA);
@@ -221,9 +235,11 @@
             this.Controls.Add(this.txtXA);
             this.Controls.Add(this.cmbSerial);
             this.Controls.Add(this.btnSerial);
+            this.MinimumSize = new System.Drawing.Size(1223, 578);
             this.Name = "Form1";
             this.Text = "Main";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chtXYZ)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -247,6 +263,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer tmrUpdateData;
         private System.Windows.Forms.Label labelShowBufferFill;
+        private System.Windows.Forms.Panel panelMy2048;
     }
 }
 

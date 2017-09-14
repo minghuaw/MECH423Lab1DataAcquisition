@@ -18,3 +18,7 @@ D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAc
 D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.csproj.CoreCompileInputs.cache
 D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.exe
 D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\obj\Debug\MECH423Lab1DataAcquisition.pdb
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\WPF2048.dll
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\WPF2048.pdb
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MyControls.dll
+D:\Workspaces\Workspace_C#\MECH 423\MECH423Lab1DataAcquisition\MECH423Lab1DataAcquisition\bin\Debug\MyControls.pdb

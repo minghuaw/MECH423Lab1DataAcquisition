@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Windows;
+using System.Windows.Forms.Integration;
+using System.Windows.Media;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Collections.Concurrent;
@@ -19,9 +22,46 @@ namespace MECH423Lab1DataAcquisition
         DateTime startTime, nulTime;
         double chartXSize = 2.0;
 
+        private ElementHost ctrlHost;
+        private WPF2048.My2048 wpfCtrl;
+        private MyControls.MyControl1 myCtrl;
+        System.Windows.FontWeight initFontWeight;
+        double initFontSize;
+        System.Windows.FontStyle initFontStyle;
+        System.Windows.Media.SolidColorBrush initBackBrush;
+        System.Windows.Media.SolidColorBrush initForeBrush;
+        System.Windows.Media.FontFamily initFontFamily;
+
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ctrlHost = new ElementHost();
+            ctrlHost.Dock = DockStyle.Fill;
+            
+            panelMy2048.Controls.Add(ctrlHost);
+            wpfCtrl = new WPF2048.My2048();
+            wpfCtrl.InitializeComponent();
+            ctrlHost.Child = wpfCtrl;
+
+            //myCtrl = new MyControls.MyControl1();
+            //myCtrl.InitializeComponent();
+            //ctrlHost.Child = myCtrl;
+
+            //myCtrl.Loaded += new RoutedEventHandler(avAddressCtrl_Loaded);
+        }
+
+        private void avAddressCtrl_Loaded(object sender, EventArgs e)
+        {
+            initBackBrush = (SolidColorBrush)myCtrl.MyControl_Background;
+            initForeBrush = myCtrl.MyControl_Foreground;
+            initFontFamily = myCtrl.MyControl_FontFamily;
+            initFontSize = myCtrl.MyControl_FontSize;
+            initFontWeight = myCtrl.MyControl_FontWeight;
+            initFontStyle = myCtrl.MyControl_FontStyle;
         }
 
         private void timerUpdate_Tick(object sender, EventArgs e)
@@ -54,9 +94,6 @@ namespace MECH423Lab1DataAcquisition
         private void UpdatePBarBuffer()
         {
             pgbarBuffer.Visible = true;
-            pgbarBuffer.ForeColor = Color.Black;
-            pgbarBuffer.Style = ProgressBarStyle.Continuous;
-
             pgbarBuffer.Maximum = serialCOM.ReadBufferSize;
             pgbarBuffer.Minimum = 0;
 
@@ -131,6 +168,7 @@ namespace MECH423Lab1DataAcquisition
                 UpdatePBarBuffer();
             }
         }
+
 
         private void serialCOM_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
