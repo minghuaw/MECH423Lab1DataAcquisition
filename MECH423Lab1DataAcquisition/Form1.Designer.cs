@@ -39,19 +39,13 @@
             System.Windows.Forms.Label label5;
             System.Windows.Forms.Label labelOrientation;
             System.Windows.Forms.Label labelGesture;
+            System.Windows.Forms.Label labelIsStarted;
+            System.Windows.Forms.Label label6;
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.Label labelIsStarted;
-            System.Windows.Forms.Label label6;
-            System.Windows.Forms.Label label7;
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnSerial = new System.Windows.Forms.Button();
             this.cmbSerial = new System.Windows.Forms.ComboBox();
             this.txtXA = new System.Windows.Forms.TextBox();
@@ -64,6 +58,7 @@
             this.tmrUpdateData = new System.Windows.Forms.Timer(this.components);
             this.labelShowBufferFill = new System.Windows.Forms.Label();
             this.panelMy2048 = new System.Windows.Forms.Panel();
+            this.labelGameStatus = new System.Windows.Forms.Label();
             this.cbxSaveToFile = new System.Windows.Forms.CheckBox();
             this.txtDirectory = new System.Windows.Forms.TextBox();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -79,8 +74,6 @@
             this.listGestureHistory = new System.Windows.Forms.ListBox();
             this.txtGesture = new System.Windows.Forms.TextBox();
             this.txtScore = new System.Windows.Forms.TextBox();
-            this.labelGameStatus = new System.Windows.Forms.Label();
-            this.chartVelocity = new System.Windows.Forms.DataVisualization.Charting.Chart();
             labelXA = new System.Windows.Forms.Label();
             labelYA = new System.Windows.Forms.Label();
             labelZA = new System.Windows.Forms.Label();
@@ -93,10 +86,8 @@
             labelGesture = new System.Windows.Forms.Label();
             labelIsStarted = new System.Windows.Forms.Label();
             label6 = new System.Windows.Forms.Label();
-            label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.chtXYZ)).BeginInit();
             this.panelMy2048.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVelocity)).BeginInit();
             this.SuspendLayout();
             // 
             // labelXA
@@ -201,6 +192,26 @@
             labelGesture.TabIndex = 30;
             labelGesture.Text = "Gesture";
             // 
+            // labelIsStarted
+            // 
+            labelIsStarted.AutoSize = true;
+            labelIsStarted.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelIsStarted.Location = new System.Drawing.Point(1004, 714);
+            labelIsStarted.Name = "labelIsStarted";
+            labelIsStarted.Size = new System.Drawing.Size(64, 25);
+            labelIsStarted.TabIndex = 34;
+            labelIsStarted.Text = "Score";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label6.Location = new System.Drawing.Point(274, 324);
+            label6.Name = "label6";
+            label6.Size = new System.Drawing.Size(120, 25);
+            label6.TabIndex = 35;
+            label6.Text = "Acceleration";
+            // 
             // btnSerial
             // 
             this.btnSerial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -256,8 +267,8 @@
             legend1.MaximumAutoSize = 10F;
             legend1.Name = "Legend1";
             this.chtXYZ.Legends.Add(legend1);
-            this.chtXYZ.Location = new System.Drawing.Point(12, 331);
-            this.chtXYZ.MinimumSize = new System.Drawing.Size(675, 300);
+            this.chtXYZ.Location = new System.Drawing.Point(12, 362);
+            this.chtXYZ.MinimumSize = new System.Drawing.Size(675, 340);
             this.chtXYZ.Name = "chtXYZ";
             this.chtXYZ.RightToLeft = System.Windows.Forms.RightToLeft.No;
             series1.ChartArea = "ChartArea1";
@@ -275,7 +286,7 @@
             this.chtXYZ.Series.Add(series1);
             this.chtXYZ.Series.Add(series2);
             this.chtXYZ.Series.Add(series3);
-            this.chtXYZ.Size = new System.Drawing.Size(675, 300);
+            this.chtXYZ.Size = new System.Drawing.Size(675, 340);
             this.chtXYZ.TabIndex = 8;
             this.chtXYZ.Text = "XYZ Line Chart";
             // 
@@ -320,17 +331,29 @@
             this.panelMy2048.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelMy2048.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelMy2048.Controls.Add(this.labelGameStatus);
-            this.panelMy2048.Location = new System.Drawing.Point(1009, 21);
+            this.panelMy2048.Location = new System.Drawing.Point(1009, 57);
             this.panelMy2048.Name = "panelMy2048";
-            this.panelMy2048.Size = new System.Drawing.Size(650, 650);
+            this.panelMy2048.Size = new System.Drawing.Size(650, 645);
             this.panelMy2048.TabIndex = 12;
+            // 
+            // labelGameStatus
+            // 
+            this.labelGameStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelGameStatus.AutoSize = true;
+            this.labelGameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGameStatus.Location = new System.Drawing.Point(2, 269);
+            this.labelGameStatus.Name = "labelGameStatus";
+            this.labelGameStatus.Size = new System.Drawing.Size(647, 91);
+            this.labelGameStatus.TabIndex = 0;
+            this.labelGameStatus.Text = "labelGameStatus";
             // 
             // cbxSaveToFile
             // 
-            this.cbxSaveToFile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbxSaveToFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.cbxSaveToFile.AutoSize = true;
             this.cbxSaveToFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSaveToFile.Location = new System.Drawing.Point(1071, 810);
+            this.cbxSaveToFile.Location = new System.Drawing.Point(14, 713);
             this.cbxSaveToFile.Name = "cbxSaveToFile";
             this.cbxSaveToFile.Size = new System.Drawing.Size(137, 29);
             this.cbxSaveToFile.TabIndex = 13;
@@ -339,20 +362,22 @@
             // 
             // txtDirectory
             // 
-            this.txtDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtDirectory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.txtDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDirectory.Location = new System.Drawing.Point(1229, 808);
+            this.txtDirectory.Location = new System.Drawing.Point(172, 711);
             this.txtDirectory.Name = "txtDirectory";
             this.txtDirectory.Size = new System.Drawing.Size(276, 30);
             this.txtDirectory.TabIndex = 14;
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnBrowse.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrowse.Location = new System.Drawing.Point(1511, 805);
+            this.btnBrowse.Location = new System.Drawing.Point(454, 708);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(148, 47);
+            this.btnBrowse.Size = new System.Drawing.Size(148, 34);
             this.btnBrowse.TabIndex = 15;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;
@@ -432,7 +457,7 @@
             this.listGestureHistory.ItemHeight = 16;
             this.listGestureHistory.Location = new System.Drawing.Point(693, 107);
             this.listGestureHistory.Name = "listGestureHistory";
-            this.listGestureHistory.Size = new System.Drawing.Size(307, 564);
+            this.listGestureHistory.Size = new System.Drawing.Size(307, 596);
             this.listGestureHistory.TabIndex = 29;
             // 
             // txtGesture
@@ -446,93 +471,16 @@
             // txtScore
             // 
             this.txtScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtScore.Location = new System.Drawing.Point(1074, 687);
+            this.txtScore.Location = new System.Drawing.Point(1074, 711);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(102, 30);
             this.txtScore.TabIndex = 33;
-            // 
-            // labelIsStarted
-            // 
-            labelIsStarted.AutoSize = true;
-            labelIsStarted.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelIsStarted.Location = new System.Drawing.Point(1004, 690);
-            labelIsStarted.Name = "labelIsStarted";
-            labelIsStarted.Size = new System.Drawing.Size(64, 25);
-            labelIsStarted.TabIndex = 34;
-            labelIsStarted.Text = "Score";
-            // 
-            // labelGameStatus
-            // 
-            this.labelGameStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelGameStatus.AutoSize = true;
-            this.labelGameStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGameStatus.Location = new System.Drawing.Point(2, 269);
-            this.labelGameStatus.Name = "labelGameStatus";
-            this.labelGameStatus.Size = new System.Drawing.Size(647, 91);
-            this.labelGameStatus.TabIndex = 0;
-            this.labelGameStatus.Text = "labelGameStatus";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label6.Location = new System.Drawing.Point(288, 303);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(120, 25);
-            label6.TabIndex = 35;
-            label6.Text = "Acceleration";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label7.Location = new System.Drawing.Point(308, 634);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(81, 25);
-            label7.TabIndex = 37;
-            label7.Text = "Velocity";
-            // 
-            // chartVelocity
-            // 
-            this.chartVelocity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            chartArea2.Name = "ChartArea1";
-            this.chartVelocity.ChartAreas.Add(chartArea2);
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.MaximumAutoSize = 10F;
-            legend2.Name = "Legend1";
-            this.chartVelocity.Legends.Add(legend2);
-            this.chartVelocity.Location = new System.Drawing.Point(12, 662);
-            this.chartVelocity.MinimumSize = new System.Drawing.Size(675, 300);
-            this.chartVelocity.Name = "chartVelocity";
-            this.chartVelocity.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series4.Legend = "Legend1";
-            series4.Name = "X Vel";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series5.Legend = "Legend1";
-            series5.Name = "Y Vel";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
-            series6.Legend = "Legend1";
-            series6.Name = "Z Vel";
-            this.chartVelocity.Series.Add(series4);
-            this.chartVelocity.Series.Add(series5);
-            this.chartVelocity.Series.Add(series6);
-            this.chartVelocity.Size = new System.Drawing.Size(675, 300);
-            this.chartVelocity.TabIndex = 36;
-            this.chartVelocity.Text = "Velocity Chart";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1671, 1002);
-            this.Controls.Add(label7);
-            this.Controls.Add(this.chartVelocity);
+            this.ClientSize = new System.Drawing.Size(1671, 753);
             this.Controls.Add(label6);
             this.Controls.Add(labelIsStarted);
             this.Controls.Add(this.txtScore);
@@ -576,7 +524,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.chtXYZ)).EndInit();
             this.panelMy2048.ResumeLayout(false);
             this.panelMy2048.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chartVelocity)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -612,7 +559,6 @@
         private System.Windows.Forms.TextBox txtGesture;
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.Label labelGameStatus;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartVelocity;
     }
 }
 

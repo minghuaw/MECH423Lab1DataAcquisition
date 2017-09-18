@@ -268,18 +268,18 @@ namespace MECH423Lab1DataAcquisition
             double tempMax = chtXYZ.ChartAreas[0].AxisX.Maximum;
             chtXYZ.ChartAreas[0].AxisX.Minimum = tempMax - chartXSize;
 
-            // Update velocity chart
-            lastXV = lastXV + CalcdVel(xA, time);
-            lastYV = lastYV + CalcdVel(yA, time);
-            lastZV = lastZV + CalcdVel(zA-g, time);
-            lastTime = time;
+            //// Update velocity chart
+            //lastXV = lastXV + CalcdVel(xA, time);
+            //lastYV = lastYV + CalcdVel(yA, time);
+            //lastZV = lastZV + CalcdVel(zA-g, time);
+            //lastTime = time;
 
-            chartVelocity.Series[0].Points.AddXY(time, lastXV);
-            chartVelocity.Series[1].Points.AddXY(time, lastYV);
-            chartVelocity.Series[2].Points.AddXY(time, lastZV);
+            //chartVelocity.Series[0].Points.AddXY(time, lastXV);
+            //chartVelocity.Series[1].Points.AddXY(time, lastYV);
+            //chartVelocity.Series[2].Points.AddXY(time, lastZV);
 
-            tempMax = chtXYZ.ChartAreas[0].AxisX.Maximum;
-            chartVelocity.ChartAreas[0].AxisX.Minimum = tempMax - chartXSize;
+            //tempMax = chtXYZ.ChartAreas[0].AxisX.Maximum;
+            //chartVelocity.ChartAreas[0].AxisX.Minimum = tempMax - chartXSize;
         }
 
         private double CalcdVel(double acc, double time)
